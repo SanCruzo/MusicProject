@@ -7,9 +7,7 @@ public class ShakerSynth : MonoBehaviour
     [Range(200f, 6000f)] public float centerHz = 2500f;
     [Range(0.80f, 0.999f)] public float resonance = 0.96f;
     [Range(0.90f, 0.9999f)] public float energyDecay = 0.995f;
-    [Tooltip("Hareket eşiği (Drive'a gelen büyüklük biriminde). Bu değerin altı sessiz.")]
     [Range(0f, 500f)] public float startThreshold = 25f;
-    [Tooltip("Eşikten önce uygulanan giriş kazancı. Gyro birimini ölçeklemek için.")]
     [Range(0.01f, 200f)] public float inputGain = 1f;
     [Header("Axis Thresholds (per‑axis offset)")]
     public bool useAxisThresholds = true;
@@ -175,3 +173,4 @@ public class ShakerSynth : MonoBehaviour
         energy = Mathf.Clamp01(e);
     }
 }
+
